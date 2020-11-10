@@ -12,7 +12,6 @@ import net.lldv.oreearn.OreEarn;
 import net.lldv.oreearn.components.data.Ore;
 import net.lldv.oreearn.components.language.Language;
 
-import javax.swing.*;
 import java.util.concurrent.CompletableFuture;
 
 /**
@@ -55,33 +54,27 @@ public class EventListener implements Listener {
                 event.setDropExp(0);
             }
 
-            CompletableFuture.runAsync(() -> {
-                try {
-                    LlamaEconomy.getAPI().addMoney(event.getPlayer(), ore.getMoney());
+            LlamaEconomy.getAPI().addMoney(event.getPlayer(), ore.getMoney());
 
-                    final String message = Language.getNP("notification",
-                            ore.getName(),
-                            LlamaEconomy.getAPI().getMonetaryUnit(),
-                            LlamaEconomy.getAPI().getMoneyFormat().format(ore.getMoney())
-                    );
+            final String message = Language.getNP("notification",
+                    ore.getName(),
+                    LlamaEconomy.getAPI().getMonetaryUnit(),
+                    LlamaEconomy.getAPI().getMoneyFormat().format(ore.getMoney())
+            );
 
-                    switch (this.plugin.getNotificationType()) {
-                        case OreEarn.NotificationType.CHAT:
-                            event.getPlayer().sendMessage(message);
-                            break;
-                        case OreEarn.NotificationType.POPUP:
-                            event.getPlayer().sendPopup(message);
-                            break;
-                        case OreEarn.NotificationType.ACTIONBAR:
-                            event.getPlayer().sendActionBar(message);
-                            break;
-                        default:
-                            break;
-                    }
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
-            });
+            switch (this.plugin.getNotificationType()) {
+                case OreEarn.NotificationType.CHAT:
+                    event.getPlayer().sendMessage(message);
+                    break;
+                case OreEarn.NotificationType.POPUP:
+                    event.getPlayer().sendPopup(message);
+                    break;
+                case OreEarn.NotificationType.ACTIONBAR:
+                    event.getPlayer().sendActionBar(message);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 

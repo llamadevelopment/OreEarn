@@ -1,11 +1,7 @@
 package net.lldv.oreearn;
 
-import cn.nukkit.Player;
 import cn.nukkit.block.BlockID;
 import cn.nukkit.item.Item;
-import cn.nukkit.level.Sound;
-import cn.nukkit.math.Vector3;
-import cn.nukkit.network.protocol.PlaySoundPacket;
 import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.utils.Config;
 import lombok.Getter;

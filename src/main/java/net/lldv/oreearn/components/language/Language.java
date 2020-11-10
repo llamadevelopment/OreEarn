@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class Language {
 
-    public final static Map<String, String> messages = new HashMap<>();
+    private final static Map<String, String> messages = new HashMap<>();
 
     public static void init(final OreEarn plugin) {
         messages.clear();
