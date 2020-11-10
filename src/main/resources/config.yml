@@ -1,0 +1,49 @@
+# Worlds, in which OreEarn is enabled.
+# If there are no worlds defined, OreEarn automatically works
+# in every world.
+worlds: []
+
+# If false players can earn money by breaking ores with silktouch
+ignoreSilktouch: true
+
+# Please note: by disabling this, ores won't get automatically smelted, which means
+# players can break an ore and place it again
+autoSmelt: true
+
+# If disabled, there won't be any drops out of ores.
+# Only recommended for mines or prison servers.
+drops: true
+
+# This defines in which way the notifications get sent.
+# -1 = none, 0 = popup, 1 = actionbar, 2 = chat
+notificationType: 0
+
+# Here you can manage the ores.
+stone:
+  money: 0.02
+  enabled: true
+quartz:
+  money: 1.0
+  enabled: true
+coal:
+  money: 1.0
+  enabled: true
+iron:
+  money: 2.0
+  enabled: true
+redstone:
+  money: 1.5
+  enabled: true
+lapis:
+  money: 5.0
+  enabled: true
+gold:
+  money: 13.5
+  enabled: true
+diamond:
+  money: 20.0
+  enabled: true
+emerald:
+  money: 35.0
+  enabled: true
+

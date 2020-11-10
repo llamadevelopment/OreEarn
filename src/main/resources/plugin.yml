@@ -1,0 +1,8 @@
+name: OreEarn
+author: Proxma
+version: 1.0.0
+api: 1.0.0
+description: OreEarn addon for LlamaEconomy
+main: net.lldv.oreearn.OreEarn
+depend:
+  - LlamaEconomy
